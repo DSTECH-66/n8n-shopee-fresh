@@ -1,8 +1,6 @@
-FROM n8nio/n8n:latest
+FROM n8nio/n8n:1.62.0
 
-# FIX Render uvloop error
 ENV N8N_UVLOOP_DISABLED=true
-ENV PYTHONUVLOOP_DISABLED=true
 
 ENV PORT=10000
 ENV N8N_HOST=0.0.0.0
@@ -16,4 +14,4 @@ ENV N8N_BASIC_AUTH_PASSWORD=shopee123
 
 EXPOSE 10000
 
-CMD ["sh", "-c", "n8n start"]
+CMD ["n8n", "start"]
