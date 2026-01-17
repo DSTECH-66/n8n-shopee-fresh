@@ -1,10 +1,14 @@
 FROM n8nio/n8n:latest
 
+# FIX Render uvloop error
+ENV N8N_UVLOOP_DISABLED=true
+ENV PYTHONUVLOOP_DISABLED=true
+
 ENV PORT=10000
 ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=10000
 ENV N8N_PROTOCOL=https
-ENV WEBHOOK_URL=https://shopee-n8n-fresh.onrender.com/
+ENV WEBHOOK_URL=https://your-app.onrender.com/
 
 ENV N8N_BASIC_AUTH_ACTIVE=true
 ENV N8N_BASIC_AUTH_USER=admin
