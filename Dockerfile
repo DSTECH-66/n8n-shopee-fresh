@@ -13,4 +13,4 @@ ENV N8N_BASIC_AUTH_PASSWORD=shopee123
 
 EXPOSE 10000
 
-CMD ["n8n", "start"]
+CMD ["sh", "-c", "n8n start"]
